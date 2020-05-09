@@ -1,0 +1,128 @@
+/* add css module styles here (optional) */
+
+._styles-module__test__3ybTi {
+  margin: 2em;
+  padding: 0.5em;
+  border: 2px solid #000;
+  font-size: 2em;
+  text-align: center;
+}
+
+._LinkPreview__link-preview-section__3elLK {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 14px;
+	border-radius: 5px;
+	margin: 20px 0px;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+	  0 -4px 24px 2px rgba(0, 0, 0, 0.03);
+	line-height: 1.5;
+	cursor: pointer;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+	  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+	  "Helvetica Neue", sans-serif;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__animated-background__Z-Tng,
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-image-loader__13bre ._LinkPreview__img__1Igjx {
+	-webkit-animation-duration: 2.25s;
+	        animation-duration: 2.25s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-name: _LinkPreview__placeHolderShimmer__yKlsy;
+	        animation-name: _LinkPreview__placeHolderShimmer__yKlsy;
+	-webkit-animation-timing-function: linear;
+	        animation-timing-function: linear;
+	background: #f6f6f6;
+	background: linear-gradient(
+	  to right,
+	  #f6f6f6 8%,
+	  #f0f0f0 18%,
+	  #f6f6f6 33%
+	);
+	position: relative;
+  }
+  @-webkit-keyframes _LinkPreview__placeHolderShimmer__yKlsy {
+	0% {
+	  background-position: -468px 0;
+	}
+	100% {
+	  background-position: 468px 0;
+	}
+  }
+  @keyframes _LinkPreview__placeHolderShimmer__yKlsy {
+	0% {
+	  background-position: -468px 0;
+	}
+	100% {
+	  background-position: 468px 0;
+	}
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD {
+	display: flex;
+	flex-direction: column;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__domain__3Y4Nu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 4px;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__domain__3Y4Nu img {
+	height: 16px;
+	width: 16px;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__domain__3Y4Nu ._LinkPreview__link-url__CZu1J,
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__domain__3Y4Nu ._LinkPreview__link-url-loader__2immM {
+	font-weight: 600;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__domain__3Y4Nu ._LinkPreview__link-url-loader__2immM {
+	background-color: #f6f6f6;
+	color: #f6f6f6;
+	border-radius: 10px;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data__2bWne ._LinkPreview__link-title__35AKc {
+	color: #1364a2;
+	font-weight: 600;
+	font-size: 15px;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data__2bWne ._LinkPreview__link-description__3IjjD {
+	font-size: 14px;
+	text-align: left;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data-loader__322CG ._LinkPreview__p1__3rFBW {
+	font-weight: 600;
+	font-size: 15px;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data-loader__322CG ._LinkPreview__p2__L7vLm {
+	font-size: 14px;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data-loader__322CG ._LinkPreview__p1__3rFBW,
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data-loader__322CG ._LinkPreview__p2__L7vLm {
+	background-color: #f6f6f6;
+	color: #f6f6f6;
+	border-radius: 10px;
+	margin-bottom: 4px;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-image__3EjBn {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	height: 100%;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-image__3EjBn img {
+	max-height: 64px;
+	-o-object-fit: cover;
+	   object-fit: cover;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-image-loader__13bre {
+	display: flex;
+	align-content: center;
+	align-items: center;
+  }
+  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-image-loader__13bre ._LinkPreview__img__1Igjx {
+	height: 64px;
+	width: 64px;
+  }
