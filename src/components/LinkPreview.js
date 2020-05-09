@@ -72,6 +72,9 @@ function LinkPreview(props) {
   }, [url])
 
   if (!isUrlValid) {
+    console.error(
+      'LinkPreview Error: You need to provide url in props to render the component'
+    )
     return null
   }
 
