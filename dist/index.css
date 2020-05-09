@@ -1,14 +1,4 @@
-/* add css module styles here (optional) */
-
-._styles-module__test__3ybTi {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
-}
-
-._LinkPreview__link-preview-section__3elLK {
+._3elLK {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -23,16 +13,16 @@
 	  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
 	  "Helvetica Neue", sans-serif;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__animated-background__Z-Tng,
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-image-loader__13bre ._LinkPreview__img__1Igjx {
+  ._3elLK ._Z-Tng,
+  ._3elLK ._13bre ._1Igjx {
 	-webkit-animation-duration: 2.25s;
 	        animation-duration: 2.25s;
 	-webkit-animation-fill-mode: forwards;
 	        animation-fill-mode: forwards;
 	-webkit-animation-iteration-count: infinite;
 	        animation-iteration-count: infinite;
-	-webkit-animation-name: _LinkPreview__placeHolderShimmer__yKlsy;
-	        animation-name: _LinkPreview__placeHolderShimmer__yKlsy;
+	-webkit-animation-name: _yKlsy;
+	        animation-name: _yKlsy;
 	-webkit-animation-timing-function: linear;
 	        animation-timing-function: linear;
 	background: #f6f6f6;
@@ -44,7 +34,7 @@
 	);
 	position: relative;
   }
-  @-webkit-keyframes _LinkPreview__placeHolderShimmer__yKlsy {
+  @-webkit-keyframes _yKlsy {
 	0% {
 	  background-position: -468px 0;
 	}
@@ -52,7 +42,7 @@
 	  background-position: 468px 0;
 	}
   }
-  @keyframes _LinkPreview__placeHolderShimmer__yKlsy {
+  @keyframes _yKlsy {
 	0% {
 	  background-position: -468px 0;
 	}
@@ -60,69 +50,69 @@
 	  background-position: 468px 0;
 	}
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD {
+  ._3elLK ._3IjjD {
 	display: flex;
 	flex-direction: column;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__domain__3Y4Nu {
+  ._3elLK ._3IjjD ._3Y4Nu {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	margin-bottom: 4px;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__domain__3Y4Nu img {
+  ._3elLK ._3IjjD ._3Y4Nu img {
 	height: 16px;
 	width: 16px;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__domain__3Y4Nu ._LinkPreview__link-url__CZu1J,
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__domain__3Y4Nu ._LinkPreview__link-url-loader__2immM {
+  ._3elLK ._3IjjD ._3Y4Nu ._CZu1J,
+  ._3elLK ._3IjjD ._3Y4Nu ._2immM {
 	font-weight: 600;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__domain__3Y4Nu ._LinkPreview__link-url-loader__2immM {
+  ._3elLK ._3IjjD ._3Y4Nu ._2immM {
 	background-color: #f6f6f6;
 	color: #f6f6f6;
 	border-radius: 10px;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data__2bWne ._LinkPreview__link-title__35AKc {
+  ._3elLK ._3IjjD ._2bWne ._35AKc {
 	color: #1364a2;
 	font-weight: 600;
 	font-size: 15px;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data__2bWne ._LinkPreview__link-description__3IjjD {
+  ._3elLK ._3IjjD ._2bWne ._3IjjD {
 	font-size: 14px;
 	text-align: left;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data-loader__322CG ._LinkPreview__p1__3rFBW {
+  ._3elLK ._3IjjD ._322CG ._3rFBW {
 	font-weight: 600;
 	font-size: 15px;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data-loader__322CG ._LinkPreview__p2__L7vLm {
+  ._3elLK ._3IjjD ._322CG ._L7vLm {
 	font-size: 14px;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data-loader__322CG ._LinkPreview__p1__3rFBW,
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-description__3IjjD ._LinkPreview__link-data-loader__322CG ._LinkPreview__p2__L7vLm {
+  ._3elLK ._3IjjD ._322CG ._3rFBW,
+  ._3elLK ._3IjjD ._322CG ._L7vLm {
 	background-color: #f6f6f6;
 	color: #f6f6f6;
 	border-radius: 10px;
 	margin-bottom: 4px;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-image__3EjBn {
+  ._3elLK ._3EjBn {
 	display: flex;
 	align-content: center;
 	align-items: center;
 	height: 100%;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-image__3EjBn img {
+  ._3elLK ._3EjBn img {
 	max-height: 64px;
 	-o-object-fit: cover;
 	   object-fit: cover;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-image-loader__13bre {
+  ._3elLK ._13bre {
 	display: flex;
 	align-content: center;
 	align-items: center;
   }
-  ._LinkPreview__link-preview-section__3elLK ._LinkPreview__link-image-loader__13bre ._LinkPreview__img__1Igjx {
+  ._3elLK ._13bre ._1Igjx {
 	height: 64px;
 	width: 64px;
   }
