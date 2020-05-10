@@ -1,30 +1,128 @@
-# react-link-preview
+<p align="left">
+  <img src="./assets/link-preview.png" alt="link-preview" width="100%">
+</p>
 
-> A component package which helps you render the preview any link
+# React Link Preview
 
-[![NPM](https://img.shields.io/npm/v/react-link-preview.svg)](https://www.npmjs.com/package/react-link-preview) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+> A component package which helps you render the preview data of any link
+
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ashwamegh/react-link-preview/)
+[![Build Status](https://travis-ci.org/ashwamegh/react-link-preview/.svg?branch=master)](https://travis-ci.org/github/ashwamegh/react-link-preview/)
+[![NPM](https://img.shields.io/npm/v/@ashwamegh/react-link-preview.svg)](https://www.npmjs.com/package/@ashwamegh/react-link-preview) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+## Demo
+
+## Table of Contents
+
+- [Install](#install)
+- [Usage](#usage)
+- [Props](#props)
+- [Contribute](#contribute)
+- [License](#license)
 
 ## Install
 
+### NPM
+
 ```bash
-npm install --save react-link-preview
+npm install @ashwamegh/react-link-preview
+```
+
+### Yarn
+
+```bash
+yarn add @ashwamegh/react-link-preview
 ```
 
 ## Usage
 
+### With built in layout
+
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'react-link-preview'
-import 'react-link-preview/dist/index.css'
+import LinkPreview from '@ashwamegh/react-link-preview'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+// If you're using built in layout, you will need to import this css
+import '@ashwamegh/react-link-preview/dist/index.css'
+
+function Example() {
+	return <LinkPreview url="https://reactjs.org"/>
 }
+
+export default Example
 ```
+
+### With custom layout (using renderProps)
+
+You can provide your own component to replace the existing one using renderProps.
+
+```jsx
+import React from 'react'
+
+import LinkPreview from '@ashwamegh/react-link-preview'
+import '@ashwamegh/react-link-preview/dist/index.css'
+
+function CustomComponent ({ loading, preview }) {
+	return loading 
+	? (<h1>Loading...</h1>)
+	: (
+		<div>
+			<p>Domain: { preview.domain }</p>
+			<p>Title: { preview.title }</p>
+			<p>Description: { preview.description }</p>
+			<img height="100px" width="100px" src={preview.img} alt={preview.title} />
+		</div>
+	)
+}
+
+function App () {
+  return <LinkPreview url="https://reactjs.org" render={CustomComponent}/>
+}
+
+export default App
+
+```
+
+## Props
+
+| Property      | Type          | Default       | Description | Required |
+| ------------- | ------------- | ------------- | ----------- | -------- |
+| `url` | `string` |  | URL to get preview data | true |
+| `onClick` | `function` |  | onClick handler for the card | false |
+| `render` | `function` |  | function which can be called with preview data to render custom component | false |
+| `width` | `string` | `90%` | Width of the card preview | false |
+| `maxWidth` | `string` | `700px` | Max Width of the card preview | false |
+| `marginTop` | `string` | `18px` | Margin top for the card | false |
+| `marginBottom` | `string` | `18px` | Margin bottom for the card | false |
+| `marginRight` | `string` | `auto` | Margin right for the card | false |
+| `marginLeft` | `string` | `auto` | Margin left for the card | false |
+
+
+## Contribute
+
+Thanks for taking the time to contribute, please check out the [src](src) to understand how things work.
+
+### Reporting Issues
+
+Found a problem? Want a new feature? First of all, see if your issue or idea has [already been reported](../../issues).
+If don't, just open a [new clear and descriptive issue](../../issues/new).
+
+### Submitting pull requests
+
+Pull requests are the greatest contributions, so be sure they are focused in scope and do avoid unrelated commits.
+
+- Fork it!
+- Clone your fork: `git clone https://github.com/<your-username>/react-link-preview`
+- Navigate to the newly cloned directory: `cd react-link-preview`
+- Create a new branch for the new feature: `git checkout -b my-new-feature`
+- Install the tools necessary for development: `yarn`
+- Make your changes.
+- Commit your changes: `git commit -am 'Add some feature'`
+- Push to the branch: `git push origin my-new-feature`
+- Submit a pull request with full remarks documenting your changes
 
 ## License
 
-MIT © [ashwamegh](https://github.com/ashwamegh)
+[MIT License](https://opensource.org/licenses/MIT) © [Shashank Shekhar](https://ashwamegh.github.io)
