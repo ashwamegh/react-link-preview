@@ -62,7 +62,6 @@ You can provide your own component to replace the existing one using renderProps
 import React from 'react'
 
 import LinkPreview from '@ashwamegh/react-link-preview'
-import '@ashwamegh/react-link-preview/dist/index.css'
 
 function CustomComponent ({ loading, preview }) {
 	return loading 
