@@ -4,7 +4,7 @@ import styles from './LinkPreview.css'
 
 const isValidUrlProp = (props, propName, componentName) => {
   if (!props) {
-    throw Error(`Missing required 'url' prop.`)
+    return new Error(`Required parameter URL was not passed.`)
   }
   if (!isValidUrl(props[propName])) {
     return new Error(
@@ -154,7 +154,13 @@ LinkPreview.defaultProps = {
 LinkPreview.propTyps = {
   url: isValidUrlProp,
   onClick: PropTypes.func,
-  render: PropTypes.func
+  render: PropTypes.func,
+  width: PropTypes.string,
+  maxWidth: PropTypes.string,
+  marginTop: PropTypes.string,
+  marginBottom: PropTypes.string,
+  marginRight: PropTypes.string,
+  marginLeft: PropTypes.string
 }
 
 export default LinkPreview
