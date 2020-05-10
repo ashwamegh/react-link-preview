@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@ashwamegh/react-link-preview": "^0.2.0",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
-    "react-scripts": "link:../node_modules/react-scripts",
-    "react-link-preview": "link:.."
+    "react-link-preview": "link:..",
+    "react-scripts": "link:../node_modules/react-scripts"
   },
   "scripts": {
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
