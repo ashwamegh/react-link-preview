@@ -5,7 +5,7 @@ var styles = {"link-preview-section":"_3elLK","animated-background":"_Z-Tng","li
 
 var isValidUrlProp = function isValidUrlProp(props, propName, componentName) {
   if (!props) {
-    throw Error("Missing required 'url' prop.");
+    return new Error("Required parameter URL was not passed.");
   }
 
   if (!isValidUrl(props[propName])) {
@@ -154,7 +154,13 @@ LinkPreview.defaultProps = {
 LinkPreview.propTyps = {
   url: isValidUrlProp,
   onClick: PropTypes.func,
-  render: PropTypes.func
+  render: PropTypes.func,
+  width: PropTypes.string,
+  maxWidth: PropTypes.string,
+  marginTop: PropTypes.string,
+  marginBottom: PropTypes.string,
+  marginRight: PropTypes.string,
+  marginLeft: PropTypes.string
 };
 
 export default LinkPreview;
