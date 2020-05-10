@@ -56,8 +56,8 @@
 	font-weight: 600;
   }
   .link-preview-section .link-description .domain .link-url-loader {
-	background-color: #f6f6f6;
-	color: #f6f6f6;
+	background-color: #f6f6f6 !important;
+	color: #f6f6f6 !important;
 	border-radius: 10px;
   }
   .link-preview-section .link-description .link-data .link-title {
@@ -78,8 +78,8 @@
   }
   .link-preview-section .link-description .link-data-loader .p1,
   .link-preview-section .link-description .link-data-loader .p2 {
-	background-color: #f6f6f6;
-	color: #f6f6f6;
+	background-color: #f6f6f6 !important;
+	color: #f6f6f6 !important;
 	border-radius: 10px;
 	margin-bottom: 4px;
   }
