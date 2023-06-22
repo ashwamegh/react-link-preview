@@ -1,6 +1,6 @@
 {
   "name": "@ashwamegh/react-link-preview",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "private": false,
   "description": "A component package which helps you render the preview of any link",
   "author": "ashwamegh",
