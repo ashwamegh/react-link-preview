@@ -36,7 +36,7 @@ function LinkPreview(props) {
     render
   } = props
 
-  const api = 'https://lpdg.herokuapp.com/parse/link'
+  const api = 'https://lpdg.up.railway.app/parse/link'
 
   const style = {
     width,
