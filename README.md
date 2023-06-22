@@ -10,6 +10,8 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ashwamegh/react-link-preview/)
 [![Build Status](https://travis-ci.org/ashwamegh/react-link-preview.svg?branch=master)](https://travis-ci.org/github/ashwamegh/react-link-preview/)
 [![NPM](https://img.shields.io/npm/v/@ashwamegh/react-link-preview.svg)](https://www.npmjs.com/package/@ashwamegh/react-link-preview) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+<br>
+<a href="https://www.buymeacoffee.com/ashwamegh" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 ## Demo
 
@@ -48,7 +50,7 @@ import LinkPreview from '@ashwamegh/react-link-preview'
 import '@ashwamegh/react-link-preview/dist/index.css'
 
 function Example() {
-	return <LinkPreview url="https://reactjs.org"/>
+  return <LinkPreview url='https://reactjs.org' />
 }
 
 export default Example
@@ -63,41 +65,39 @@ import React from 'react'
 
 import LinkPreview from '@ashwamegh/react-link-preview'
 
-function CustomComponent ({ loading, preview }) {
-	return loading 
-	? (<h1>Loading...</h1>)
-	: (
-		<div>
-			<p>Domain: { preview.domain }</p>
-			<p>Title: { preview.title }</p>
-			<p>Description: { preview.description }</p>
-			<img height="100px" width="100px" src={preview.img} alt={preview.title} />
-		</div>
-	)
+function CustomComponent({ loading, preview }) {
+  return loading ? (
+    <h1>Loading...</h1>
+  ) : (
+    <div>
+      <p>Domain: {preview.domain}</p>
+      <p>Title: {preview.title}</p>
+      <p>Description: {preview.description}</p>
+      <img height='100px' width='100px' src={preview.img} alt={preview.title} />
+    </div>
+  )
 }
 
-function App () {
-  return <LinkPreview url="https://reactjs.org" render={CustomComponent}/>
+function App() {
+  return <LinkPreview url='https://reactjs.org' render={CustomComponent} />
 }
 
 export default App
-
 ```
 
 ## Props
 
-| Property      | Type          | Default       | Description | Required |
-| ------------- | ------------- | ------------- | ----------- | -------- |
-| `url` | `string` |  | URL to get preview data | true |
-| `onClick` | `function` |  | onClick handler for the card | false |
-| `render` | `function` |  | function which can be called with preview data to render custom component | false |
-| `width` | `string` | `90%` | Width of the card preview | false |
-| `maxWidth` | `string` | `700px` | Max Width of the card preview | false |
-| `marginTop` | `string` | `18px` | Margin top for the card | false |
-| `marginBottom` | `string` | `18px` | Margin bottom for the card | false |
-| `marginRight` | `string` | `auto` | Margin right for the card | false |
-| `marginLeft` | `string` | `auto` | Margin left for the card | false |
-
+| Property       | Type       | Default | Description                                                               | Required |
+| -------------- | ---------- | ------- | ------------------------------------------------------------------------- | -------- |
+| `url`          | `string`   |         | URL to get preview data                                                   | true     |
+| `onClick`      | `function` |         | onClick handler for the card                                              | false    |
+| `render`       | `function` |         | function which can be called with preview data to render custom component | false    |
+| `width`        | `string`   | `90%`   | Width of the card preview                                                 | false    |
+| `maxWidth`     | `string`   | `700px` | Max Width of the card preview                                             | false    |
+| `marginTop`    | `string`   | `18px`  | Margin top for the card                                                   | false    |
+| `marginBottom` | `string`   | `18px`  | Margin bottom for the card                                                | false    |
+| `marginRight`  | `string`   | `auto`  | Margin right for the card                                                 | false    |
+| `marginLeft`   | `string`   | `auto`  | Margin left for the card                                                  | false    |
 
 ## Contribute
 
