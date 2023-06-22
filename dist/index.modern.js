@@ -7,41 +7,35 @@ var isValidUrlProp = function isValidUrlProp(props, propName, componentName) {
   if (!props) {
     return new Error("Required parameter URL was not passed.");
   }
-
   if (!isValidUrl(props[propName])) {
     return new Error("Invalid prop '" + propName + "' passed to '" + componentName + "'. Expected a valid url.");
   }
 };
-
 var isValidUrl = function isValidUrl(url) {
   var regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/;
   var validUrl = regex.test(url);
   return validUrl;
 };
-
 function LinkPreview(props) {
   var _useState = useState(true),
-      loading = _useState[0],
-      setLoading = _useState[1];
-
+    loading = _useState[0],
+    setLoading = _useState[1];
   var _useState2 = useState({}),
-      preview = _useState2[0],
-      setPreviewData = _useState2[1];
-
+    preview = _useState2[0],
+    setPreviewData = _useState2[1];
   var _useState3 = useState(false),
-      isUrlValid = _useState3[0],
-      setUrlValidation = _useState3[1];
-
+    isUrlValid = _useState3[0],
+    setUrlValidation = _useState3[1];
   var url = props.url,
-      width = props.width,
-      maxWidth = props.maxWidth,
-      marginTop = props.marginTop,
-      marginBottom = props.marginBottom,
-      marginRight = props.marginRight,
-      marginLeft = props.marginLeft,
-      onClick = props.onClick,
-      render = props.render;
-  var api = 'https://lpdg.herokuapp.com/parse/link';
+    width = props.width,
+    maxWidth = props.maxWidth,
+    marginTop = props.marginTop,
+    marginBottom = props.marginBottom,
+    marginRight = props.marginRight,
+    marginLeft = props.marginLeft,
+    onClick = props.onClick,
+    render = props.render;
+  var api = 'https://lpdg.up.railway.app/parse/link';
   var style = {
     width: width,
     maxWidth: maxWidth,
@@ -54,13 +48,11 @@ function LinkPreview(props) {
     var fetchData = function fetchData() {
       try {
         var fetch = window.fetch;
-
         if (isValidUrl(url)) {
           setUrlValidation(true);
         } else {
           return Promise.resolve({});
         }
-
         setLoading(true);
         return Promise.resolve(fetch(api, {
           method: 'POST',
@@ -81,15 +73,12 @@ function LinkPreview(props) {
         return Promise.reject(e);
       }
     };
-
     fetchData();
   }, [url]);
-
   if (!isUrlValid) {
     console.error('LinkPreview Error: You need to provide url in props to render the component');
     return null;
   }
-
   if (render) {
     return render({
       loading: loading,
@@ -141,7 +130,6 @@ function LinkPreview(props) {
     }))));
   }
 }
-
 LinkPreview.defaultProps = {
   onClick: function onClick() {},
   width: '90%',
