@@ -13,6 +13,8 @@
 <br>
 <a href="https://www.buymeacoffee.com/ashwamegh" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
+> **<ins>NOTE: This utilizes https://github.com/ashwamegh/link-preview-generator-server server deployed on Azure, a free web server which can run 30 minutes in a day.</ins> If you want to use it in a PRODUCTION app, I would recommend you to use your own server (You can use the [`Dockerfile`](https://github.com/ashwamegh/link-preview-generator-server/blob/master/Dockerfile) or the [Docker hub image](https://hub.docker.com/repository/docker/ashwamegh/lpdg-server) for deploying [link-preview-generator-server](https://github.com/ashwamegh/link-preview-generator-server)) and provide the custom link of the API for `customDomain` in the Component Props**
+
 ## Demo
 
 ## Table of Contents
@@ -79,7 +81,13 @@ function CustomComponent({ loading, preview }) {
 }
 
 function App() {
-  return <LinkPreview url='https://reactjs.org' render={CustomComponent} />
+  return (
+    <LinkPreview
+      url='https://reactjs.org'
+      customDomain='https://lpdg-server.azurewebsites.net/parse/link'
+      render={CustomComponent}
+    />
+  )
 }
 
 export default App
@@ -87,17 +95,18 @@ export default App
 
 ## Props
 
-| Property       | Type       | Default | Description                                                               | Required |
-| -------------- | ---------- | ------- | ------------------------------------------------------------------------- | -------- |
-| `url`          | `string`   |         | URL to get preview data                                                   | true     |
-| `onClick`      | `function` |         | onClick handler for the card                                              | false    |
-| `render`       | `function` |         | function which can be called with preview data to render custom component | false    |
-| `width`        | `string`   | `90%`   | Width of the card preview                                                 | false    |
-| `maxWidth`     | `string`   | `700px` | Max Width of the card preview                                             | false    |
-| `marginTop`    | `string`   | `18px`  | Margin top for the card                                                   | false    |
-| `marginBottom` | `string`   | `18px`  | Margin bottom for the card                                                | false    |
-| `marginRight`  | `string`   | `auto`  | Margin right for the card                                                 | false    |
-| `marginLeft`   | `string`   | `auto`  | Margin left for the card                                                  | false    |
+| Property       | Type       | Default                                            | Description                                                               | Required |
+| -------------- | ---------- | -------------------------------------------------- | ------------------------------------------------------------------------- | -------- |
+| `url`          | `string`   |                                                    | URL to get preview data                                                   | true     |
+| `onClick`      | `function` |                                                    | onClick handler for the card                                              | false    |
+| `customDomain` | `string`   | `https://lpdg-server.azurewebsites.net/parse/link` | Custom Server API link which can parse the metadata of the page           | false    |
+| `render`       | `function` |                                                    | function which can be called with preview data to render custom component | false    |
+| `width`        | `string`   | `90%`                                              | Width of the card preview                                                 | false    |
+| `maxWidth`     | `string`   | `700px`                                            | Max Width of the card preview                                             | false    |
+| `marginTop`    | `string`   | `18px`                                             | Margin top for the card                                                   | false    |
+| `marginBottom` | `string`   | `18px`                                             | Margin bottom for the card                                                | false    |
+| `marginRight`  | `string`   | `auto`                                             | Margin right for the card                                                 | false    |
+| `marginLeft`   | `string`   | `auto`                                             | Margin left for the card                                                  | false    |
 
 ## Contribute
 
