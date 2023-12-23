@@ -14,7 +14,8 @@ const isValidUrlProp = (props, propName, componentName) => {
 }
 
 const isValidUrl = (url) => {
-  const regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
+  const regex =
+    /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
   const validUrl = regex.test(url)
   return validUrl
 }
@@ -33,10 +34,9 @@ function LinkPreview(props) {
     marginRight,
     marginLeft,
     onClick,
-    render
+    render,
+    customDomain
   } = props
-
-  const api = 'https://lpdg.up.railway.app/parse/link'
 
   const style = {
     width,
@@ -56,7 +56,7 @@ function LinkPreview(props) {
         return {}
       }
       setLoading(true)
-      const response = await fetch(api, {
+      const response = await fetch(customDomain, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -148,10 +148,11 @@ LinkPreview.defaultProps = {
   marginTop: '18px',
   marginBottom: '18px',
   marginRight: 'auto',
-  marginLeft: 'auto'
+  marginLeft: 'auto',
+  customDomain: 'https://lpdg-server.azurewebsites.net/parse/link'
 }
 
-LinkPreview.propTyps = {
+LinkPreview.propType = {
   url: isValidUrlProp,
   onClick: PropTypes.func,
   render: PropTypes.func,
@@ -160,7 +161,8 @@ LinkPreview.propTyps = {
   marginTop: PropTypes.string,
   marginBottom: PropTypes.string,
   marginRight: PropTypes.string,
-  marginLeft: PropTypes.string
+  marginLeft: PropTypes.string,
+  customDomain: PropTypes.string
 }
 
 export default LinkPreview
