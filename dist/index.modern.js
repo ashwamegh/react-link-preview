@@ -34,8 +34,8 @@ function LinkPreview(props) {
     marginRight = props.marginRight,
     marginLeft = props.marginLeft,
     onClick = props.onClick,
-    render = props.render;
-  var api = 'https://lpdg.up.railway.app/parse/link';
+    render = props.render,
+    customDomain = props.customDomain;
   var style = {
     width: width,
     maxWidth: maxWidth,
@@ -54,7 +54,7 @@ function LinkPreview(props) {
           return Promise.resolve({});
         }
         setLoading(true);
-        return Promise.resolve(fetch(api, {
+        return Promise.resolve(fetch(customDomain, {
           method: 'POST',
           headers: {
             Accept: 'application/json',
@@ -137,9 +137,10 @@ LinkPreview.defaultProps = {
   marginTop: '18px',
   marginBottom: '18px',
   marginRight: 'auto',
-  marginLeft: 'auto'
+  marginLeft: 'auto',
+  customDomain: 'https://lpdg-server.azurewebsites.net/parse/link'
 };
-LinkPreview.propTyps = {
+LinkPreview.propType = {
   url: isValidUrlProp,
   onClick: PropTypes.func,
   render: PropTypes.func,
@@ -148,7 +149,8 @@ LinkPreview.propTyps = {
   marginTop: PropTypes.string,
   marginBottom: PropTypes.string,
   marginRight: PropTypes.string,
-  marginLeft: PropTypes.string
+  marginLeft: PropTypes.string,
+  customDomain: PropTypes.string
 };
 
 export default LinkPreview;
