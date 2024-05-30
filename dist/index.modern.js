@@ -12,7 +12,7 @@ var isValidUrlProp = function isValidUrlProp(props, propName, componentName) {
   }
 };
 var isValidUrl = function isValidUrl(url) {
-  var regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/;
+  var regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/;
   var validUrl = regex.test(url);
   return validUrl;
 };
