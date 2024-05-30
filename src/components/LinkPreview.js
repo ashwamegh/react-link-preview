@@ -15,7 +15,7 @@ const isValidUrlProp = (props, propName, componentName) => {
 
 const isValidUrl = (url) => {
   const regex =
-    /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
+    /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
   const validUrl = regex.test(url)
   return validUrl
 }
