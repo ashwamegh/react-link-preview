@@ -1,7 +1,7 @@
 import React from 'react'
 
-import LinkPreview from '@ashwamegh/react-link-preview'
-import '@ashwamegh/react-link-preview/dist/index.css'
+import LinkPreview from 'react-link-preview'
+import 'react-link-preview/dist/index.css'
 
 function CustomComponent({ loading, preview, onClick }) {
   return loading ? (

@@ -1,10 +1,9 @@
 {
   "name": "react-link-preview-example",
-  "homepage": "https://ashwamegh.github.io/react-link-preview",
+  "homepage": ".",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@ashwamegh/react-link-preview": "^0.3.0",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "react-link-preview": "link:..",
@@ -15,9 +14,6 @@
     "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
     "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
