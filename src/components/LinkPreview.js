@@ -20,23 +20,21 @@ const isValidUrl = (url) => {
   return validUrl
 }
 
-function LinkPreview(props) {
+function LinkPreview({
+  url,
+  width = '90%',
+  maxWidth = '700px',
+  marginTop = '18px',
+  marginBottom = '18px',
+  marginRight = 'auto',
+  marginLeft = 'auto',
+  onClick = () => {},
+  render,
+  customDomain = 'https://lpdg-server.azurewebsites.net/parse/link'
+}) {
   const [loading, setLoading] = useState(true)
   const [preview, setPreviewData] = useState({})
   const [isUrlValid, setUrlValidation] = useState(false)
-
-  const {
-    url,
-    width,
-    maxWidth,
-    marginTop,
-    marginBottom,
-    marginRight,
-    marginLeft,
-    onClick,
-    render,
-    customDomain
-  } = props
 
   const style = {
     width,
@@ -141,18 +139,7 @@ function LinkPreview(props) {
   }
 }
 
-LinkPreview.defaultProps = {
-  onClick: () => {},
-  width: '90%',
-  maxWidth: '700px',
-  marginTop: '18px',
-  marginBottom: '18px',
-  marginRight: 'auto',
-  marginLeft: 'auto',
-  customDomain: 'https://lpdg-server.azurewebsites.net/parse/link'
-}
-
-LinkPreview.propType = {
+LinkPreview.propTypes = {
   url: isValidUrlProp,
   onClick: PropTypes.func,
   render: PropTypes.func,

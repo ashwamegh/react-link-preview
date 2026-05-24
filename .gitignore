@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+node_modules
+dist
+e2e_app/node_modules
+e2e_app/dist
+e2e_app/.parcel-cache
+playwright-report
+test-results
