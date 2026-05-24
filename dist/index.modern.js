@@ -16,7 +16,25 @@ var isValidUrl = function isValidUrl(url) {
   var validUrl = regex.test(url);
   return validUrl;
 };
-function LinkPreview(props) {
+function LinkPreview(_ref) {
+  var url = _ref.url,
+    _ref$width = _ref.width,
+    width = _ref$width === void 0 ? '90%' : _ref$width,
+    _ref$maxWidth = _ref.maxWidth,
+    maxWidth = _ref$maxWidth === void 0 ? '700px' : _ref$maxWidth,
+    _ref$marginTop = _ref.marginTop,
+    marginTop = _ref$marginTop === void 0 ? '18px' : _ref$marginTop,
+    _ref$marginBottom = _ref.marginBottom,
+    marginBottom = _ref$marginBottom === void 0 ? '18px' : _ref$marginBottom,
+    _ref$marginRight = _ref.marginRight,
+    marginRight = _ref$marginRight === void 0 ? 'auto' : _ref$marginRight,
+    _ref$marginLeft = _ref.marginLeft,
+    marginLeft = _ref$marginLeft === void 0 ? 'auto' : _ref$marginLeft,
+    _ref$onClick = _ref.onClick,
+    onClick = _ref$onClick === void 0 ? function () {} : _ref$onClick,
+    render = _ref.render,
+    _ref$customDomain = _ref.customDomain,
+    customDomain = _ref$customDomain === void 0 ? 'https://lpdg-server.azurewebsites.net/parse/link' : _ref$customDomain;
   var _useState = useState(true),
     loading = _useState[0],
     setLoading = _useState[1];
@@ -26,16 +44,6 @@ function LinkPreview(props) {
   var _useState3 = useState(false),
     isUrlValid = _useState3[0],
     setUrlValidation = _useState3[1];
-  var url = props.url,
-    width = props.width,
-    maxWidth = props.maxWidth,
-    marginTop = props.marginTop,
-    marginBottom = props.marginBottom,
-    marginRight = props.marginRight,
-    marginLeft = props.marginLeft,
-    onClick = props.onClick,
-    render = props.render,
-    customDomain = props.customDomain;
   var style = {
     width: width,
     maxWidth: maxWidth,
@@ -130,17 +138,7 @@ function LinkPreview(props) {
     }))));
   }
 }
-LinkPreview.defaultProps = {
-  onClick: function onClick() {},
-  width: '90%',
-  maxWidth: '700px',
-  marginTop: '18px',
-  marginBottom: '18px',
-  marginRight: 'auto',
-  marginLeft: 'auto',
-  customDomain: 'https://lpdg-server.azurewebsites.net/parse/link'
-};
-LinkPreview.propType = {
+LinkPreview.propTypes = {
   url: isValidUrlProp,
   onClick: PropTypes.func,
   render: PropTypes.func,
